@@ -1,0 +1,95 @@
+Version: 1.0
+
+Base URL: http://127.0.0.1:8000/api/
+
+Endpoints
+----------
+
+USER Endpoints:
+Create (POST): http://127.0.0.1:8000/api/user
+Read (GET): http://127.0.0.1:8000/api/user/id?
+Read (GET): http://127.0.0.1:8000/api/user/id?
+Update (PUT): http://127.0.0.1:8000/api/user/id?
+Read (DELETE): http://127.0.0.1:8000/api/user/id?
+Where id >= 1;
+
+ASSET Endpoints:
+Create (POST): http://127.0.0.1:8000/api/asset
+Read (GET): http://127.0.0.1:8000/api/asset/id?
+Read (GET): http://127.0.0.1:8000/api/asset/id?
+Update (PUT): http://127.0.0.1:8000/api/asset/id?
+Read (DELETE): http://127.0.0.1:8000/api/asset/id?
+Where id >= 1;
+
+VENDOR Endpoints:
+Create (POST): http://127.0.0.1:8000/api/vendor
+Read (GET): http://127.0.0.1:8000/api/vendor/id?
+Read (GET): http://127.0.0.1:8000/api/vendor/id?
+Update (PUT): http://127.0.0.1:8000/api/vendor/id?
+Read (DELETE): http://127.0.0.1:8000/api/vendor/id?
+Where id >= 1;
+
+AssetAssignment Endpoints:
+Create (POST): http://127.0.0.1:8000/api/asset_assignment
+Read (GET): http://127.0.0.1:8000/api/asset_assignment/id?
+Read (GET): http://127.0.0.1:8000/api/asset_assignment/id?
+Update (PUT): http://127.0.0.1:8000/api/asset_assignment/id?
+Read (DELETE): http://127.0.0.1:8000/api/asset_assignment/id?
+Where id >= 1;
+
+
+
+Response Payload
+-------------------
+
+{
+	"status": "success",
+	"data": [],
+	"message": "error: notify IT"
+}
+
+
+Request Payload
+---------------------
+
+User endpoint
+{
+    "firstname": "Elon",
+    "middlename": "Musk",
+    "lastname": "tesla",
+    "email": "elon@tesla.com",
+    "phoneno": "08186705771",
+    "picture_url": "uploads/image2.png",
+    "password": "123456",
+    "is_disabled": "Yes"
+}
+
+Asset endpoint
+{
+    "type": "type1",
+    "description": "Heavy duty machinery",
+    "movement": "fixed",
+    "picture_path": "uploads/pics1.jpg",
+    "purchase_date": "2020-12-09",
+    "start_use_date": "2021-12-13 05:39:12",
+    "purchase_price": "4900.00",
+    "warranty_expiry_date": "2022-12-01",
+    "degredation_year": 2024,
+    "current_value_naira": "5000.00",
+    "location": "Texas"
+}
+
+Vendor endpoint
+{
+    "name": "abraka enterprise",
+    "category": "category1"
+}
+
+AssetAssignment endpoint
+{
+    "assignment_date": "2021-10-10",
+    "status": "active",
+    "is_due": "2021-09-18 11:12:25",
+    "due_date": "2021-11-10",
+    "assigned_by": "kalio tamunotonye"
+}
